@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<section class="main">
+  <h1 class="title">Spam Mail Prediction</h1>
+  <p>Enter the content of the email below to check whether it is SPAM or NOT SPAM. Our model will analyze the text and
+    provide a prediction.</p>
+  <form>
+    <textarea placeholder="Write the email content here..." id="main-text"></textarea>
+    <div class="btn-wrapper">
+      <button type="button" id="predict-button">Predict</button>
+      <button type="button" id="clear-button">Clear Prompt</button>
+    </div>
+    <div id="result">
+      <label id="result-label">Prediction will appear here</label>
+    </div>
+  </form>
+</section>
+
+<section id="loader">
+  <span>Loading...</span>
+</section>
+{% endblock %}
