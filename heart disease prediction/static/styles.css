@@ -65,6 +65,10 @@ form input {
   padding: 10px;
   border-radius: 3px;
   border: 1.5px solid var(--primary-color);
+  transition: all 0.3s ease-in-out;
+}
+form input:focus {
+  background-color: var(--primary-color);
 }
 form select {
   width: 100%;
