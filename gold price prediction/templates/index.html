@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<section class="main">
+  <h1 class="title">Gold Price Prediction</h1>
+  <p>Enter the financial data below to predict the price of Gold (GLD). The model will analyze the data and provide a
+    prediction.</p>
+  <form id="prediction-form">
+    <div class="input-wrapper">
+      <label for="spx">SPX (S&P 500 Index):</label>
+      <input type="number" id="spx" placeholder="Enter S&P 500 Index" required>
+    </div>
+    <div class="input-wrapper">
+      <label for="uso">USO (Oil Price):</label>
+      <input type="number" id="uso" placeholder="Enter Oil Price" required>
+    </div>
+    <div class="input-wrapper">
+      <label for="slv">SLV (Silver Price):</label>
+      <input type="number" id="slv" placeholder="Enter Silver Price" required>
+    </div>
+    <div class="input-wrapper">
+      <label for="eur_usd">EUR/USD Exchange Rate:</label>
+      <input type="number" id="eur_usd" placeholder="Enter EUR/USD Exchange Rate" required>
+    </div>
+    <div class="input-wrapper">
+      <label for="date">Select Date:</label>
+      <input type="date" id="date" required>
+    </div>
+
+    <div class="btn-wrapper">
+      <button type="button" id="predict-button">Predict</button>
+      <button type="button" id="clear-button">Clear Input</button>
+    </div>
+
+    <div id="result">
+      <label id="result-label">Prediction will appear here</label>
+    </div>
+  </form>
+</section>
+
+<section id="loader">
+</section>
+{% endblock %}
